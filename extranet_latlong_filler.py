@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut, GeopyError
+from credentials import login_Extranet,senha_Extranet
 
 # Ler o arquivo Excel
 ids_produtos = pd.read_excel('ProdutosExtranet.xlsx')
@@ -15,8 +16,6 @@ lista_produtos = ids_produtos[coluna].tolist()
 print(lista_produtos)
 
 url_Extranet = 'https://extranet.lopesrio.com.br/'
-login_Extranet = "141.984.977-88"
-senha_Extranet = "wi27vtczZzZ!"
 
 #Navegador
 navegador = webdriver.Chrome()
